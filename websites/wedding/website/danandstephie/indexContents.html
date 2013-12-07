@@ -1,0 +1,85 @@
+<div id="container">
+	<div id="intro">
+		<div id="pageHeader">
+			
+			<h1><span>Dan and Stephanie</span></h1>
+			<h2><span>Our wedding website</span></h2>
+			<a id="backHome" href="/"></a>
+		</div>
+
+		<div id="quickSummary">
+			<img src="images/photo-booth-{{ random }}.jpg" alt="stephanie wiping dan's face" />
+		</div>
+
+		<div id="welcome">
+			<h3>
+				{% block welcomeHeader %}
+				Welcome to our wedding website
+				{% endblock welcomeHeader %}
+			</h3>
+			<p>
+				{% block welcomeContent %}
+				<p>Welcome to our website.  You can RSVP, sign our guestbook, request songs, and stay up to date with our plans around the best day ever.  A little explanatory note about our invitations:  The envelopes are made of flower seeds, Daphne bush, and recycled paper pulp.  You can plant or compost them.  Also, we drew the invitations ourselves and had them printed on recycled paper.</p>
+				<p>(Spoiler alert: the seeds in the envelopes include Red Corn Poppy, Corn Poppy, Spurred Snapdragon, Catchfly, English Daisy, Showy Evening Primrose, Gold Yarrow, Roman Chamomile, Tussock Bellflower, Foxglove, Fringed Sagewort, White Yarrow, Red Yarrow, Monkeyflower, and Creeping Thyme.  Plant and cover with just one eigth inch of soil and keep moist until established.)</p>
+				{% endblock welcomeContent %}
+			</p>
+		</div>
+	</div>
+
+	<div id="detail">
+		{% block detailContent %}
+		<div id="detailOne">
+			<img src="images/home.jpg" alt="dan and stephie"/>
+		</div>
+		{% endblock detailContent %}
+		<!--
+		<div id="detailOne">
+			<h3><span>Additional One</span></h3>
+			<p><span>
+				Text
+			</span></p>
+		</div>
+
+		<div id="detailTwo">
+			<h3><span>Additional Two</span></h3>
+			<p><span>
+				Text
+			</span></p>
+		</div>
+		-->
+	</div>
+
+	
+	{% block links %}
+	<div id="linkList">
+		<div id="linkList2">
+			<div id="lselect">
+				<ul>
+					<li><a href="our-story" title="Our Story (AccessKey: o)" accesskey="o">Our Story</a></li>
+					<li><a href="wedding-party" title="Wedding Party (AccessKey: w)" accesskey="w">Wedding Party</a></li>
+					<li><a href="ceremony-and-reception" title="Ceremony & Reception (AccessKey: c)" accesskey="c">Ceremony & Reception</a></li>
+					<li><a href="rsvp" title="RSVP (AccessKey: r)" accesskey="r">RSVP</a></li>
+					<li><a href="request-songs" title="Request Songs (AccessKey: s)" accesskey="s">Request Songs</a></li>
+					<li><a href="stuff-to-bring" title="Stuff to Bring (AccessKey: b)" accesskey="b">Stuff to Bring</a></li>
+					<li><a href="where-to-stay" title="Where to Stay (AccessKey: h)" accesskey="h">Where to Stay</a></li>
+					<li><a href="what-to-do" title="What to Do (AccessKey: l)" accesskey="l">What to Do</a></li>
+					<li><a href="sign-our-guestbook" title="Sign Our Guestbook (AccessKey: g)" accesskey="g">Sign Our Guestbook</a></li>
+					<li><a href="contact-us" title="Contact Us (AccessKey: u)" accesskey="u">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	{% endblock links %}
+
+
+</div>
+
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#info').click(function (){ $(this).hide(); });
+	});
+</script>
+{% block javascript %}
+{% endblock javascript %}

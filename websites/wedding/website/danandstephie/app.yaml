@@ -1,0 +1,27 @@
+application: dan-and-stephie
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /favicon\.ico
+  static_files: images/favicon.ico
+  upload: images/favicon\.ico
+
+- url: /js
+  static_dir: js
+
+- url: /css
+  static_dir: css
+
+- url: /audio
+  static_dir: audio
+
+- url: /images
+  static_dir: images
+
+- url: /.*
+  script: index.py
+
+builtins:
+- datastore_admin: on  

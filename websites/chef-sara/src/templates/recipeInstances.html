@@ -1,0 +1,51 @@
+<%inherit file='master.html'/>
+
+<%block name="mainContent">
+	<div class="content wide">
+		<%include file="recipe.html"/>
+
+		<div class="instanceList">
+		% if recipe.instances.count() > 0:
+			<h3 class="normal">Previous Cookings</h3>
+			% for c in recipe.instances:
+			<div class="indent spaceOutAfter">
+				<p><strong>${c.created.strftime('%Y %B %d')}</strong>: ${c.comments}</p>
+                % if c.picture:
+				<img src="/stored-images/instance/${c.key().id()}" alt="picture of this instance of the recipe"/>
+                % endif
+			</div>
+			% endfor
+		% endif
+		</div>
+
+		<h3 class="normal">Cook it some more!</h3>
+		<div class="spaceOutAfter">
+			<form action="/recipe/cook/save" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="id" value="${recipe.key().id()}"/>
+				<div class="editRecipe">
+					<div class="editField">
+						<label for="comments">Comments</label>
+						<textarea name="comments" id="comments" rows="8" cols="52" placeholder="comments" required></textarea>
+					</div>
+					<div class="editField">
+						<label for="image">Photo</label>
+						<input name="image" type="file" id="image"/>
+					</div>
+				</div>
+				<div class="save">
+					<input type="submit" class="button" value="Done Cooking" />
+				</div>
+			</form>
+		</div>
+
+		% if recipe.references.count() > 0:
+		<h4>Links</h4>
+		<ul>
+			% for t in recipe.references:
+			<li><a href="${t.link}">${t.name}</a></li>
+			% endfor
+		</ul>
+		% endif
+
+	</div>
+</%block>

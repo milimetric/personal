@@ -1,0 +1,24 @@
+H2 { line-height: 20pt; letter-spacing: 0px; font-weight: normal; font-size: 17pt; color: black; font-family: arial }
+
+P { line-height: 13pt; letter-spacing: 0px; font-weight: normal; font-size: 10pt; color: black; font-family: arial }
+
+a.topmenu:link { color: black; text-decoration: none }
+a.topmenu:active { color: black; text-decoration: none }
+a.topmenu:visited { color: black; text-decoration: none }
+a.topmenu:hover { color: black; text-decoration: underline }
+
+a.menu:link { color: white; text-decoration: none }
+a.menu:active { color: white; text-decoration: none }
+a.menu:visited { color: white; text-decoration: none }
+a.menu:hover { color: white; text-decoration: underline }
+
+a.page:link { color: #ca181c; text-decoration: underline }
+a.page:active { color: #ca181c; text-decoration: underline }
+a.page:visited { color: #ca181c; text-decoration: underline }
+a.page:hover { color: #007bcd; text-decoration: underline }
+
+table.colorone { background-color: #ffffff; }
+table.colortwo { background-color: #ffffff; }
+table.bannerbgcolor { background-color: #ffffff; }
+
+td.linkbgcolor { background-color: #66B0E1; }

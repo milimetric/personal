@@ -1,0 +1,54 @@
+{% extends 'indexContents.html' %}
+
+	{% block welcomeHeader %}
+		Sign our Guestbook!
+	{% endblock welcomeHeader %}
+
+	{% block welcomeContent %}
+	<form id="signGuestbook" action="/sign-our-guestbook" method="POST">
+		<fieldset>
+			<dl>
+				<dt>
+					<label for="name">Your Name</label>
+				</dt>
+				<dd>
+					<input type="text" name="name" id="name" required/>
+				</dd>
+
+				<dt>
+					<label for="note">Note</label>
+				</dt>
+				<dd>
+					<textarea rows="7" cols="30" id="note" name="note" required></textarea>
+				</dd>
+			</dl>
+		</fieldset>
+		<div class="submit">
+			<input type="submit" value="Sign" />
+		</div>
+	</form>
+
+	{% include "info.html" %}
+	{% endblock welcomeContent %}
+
+	{% block detailContent %}
+	<ul id="signatures">
+		{% include "signatures.html" %}
+	</ul>
+	{% endblock detailContent %}
+
+	{% block javascript %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#signGuestbook').submit(function(event){
+				event.preventDefault();
+				var f = $(this);
+				$.post(f.attr('action'), f.serialize(), function(data){
+					$('#signatures').html(data);
+					$('#message').text('Thank you :)');
+					$('#info').show('slow');
+				});
+			});
+		});
+	</script>
+	{% endblock javascript %}

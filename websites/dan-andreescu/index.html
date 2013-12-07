@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<link rel="stylesheet" href="/content/css/lights.css" ></link>
+		<title>{% block title %}Dan's Games{% endblock title %}
+	</head>
+	<body>
+		{% if nickname %}Welcome {{ nickname }}{% endif %}
+		<a href="{{ url }}">{{ url_linktext }}</a>
+		<br />
+		{% block game %}
+		<h3>Games</h3>
+		<ul>
+			<li><a href="/lightsOut">Lights Out</a></li>
+			<li><a href="/airplane">Airplane</a></li>
+			<li><a href="/patterns">Patterns</a></li>
+		</ul>
+		{% endblock game %}
+	</body>
+	{% block js %}
+	<script src="/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+	<script src="/yui/build/element/element-beta-min.js" type="text/javascript"></script>
+	<script src="/yui/build/connection/connection-min.js" type="text/javascript"></script>
+	<script src="/yui/build/json/json-min.js" type="text/javascript"></script>
+	<script src="/content/js/common.js" type="text/javascript"></script>
+	{% endblock js %}
+</html>

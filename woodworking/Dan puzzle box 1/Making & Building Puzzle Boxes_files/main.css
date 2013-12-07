@@ -1,0 +1,557 @@
+	a.link:link {font:bold 12px Century;color:ffffff; text-decoration:none;}
+	a.link:visited {font:bold 12px Century;color:ffffff; text-decoration:none;}
+	a.link:hover {font:bold 12px Century;color:ffffff; text-decoration:none;}
+	
+	td { FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;}
+           
+	td.link {padding:0px 0px 0px 0px;}
+	
+	div.body {font:14px arial; color:000000;}
+	
+	body {
+	font:13px Century; 
+	background-image:url(https://www.quagmirepuzzleboxes.com/D/parchment.gif); 
+	background-color: #FFF8DD;
+	MARGIN: 0px;
+        }
+
+/* Top page main title */
+.qpb_t1 {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 26px;
+    COLOR: #800000;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+}
+
+/* Top page main title */ 
+.qpb_t2 {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 22px;
+    COLOR: #000000;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+}
+
+.qpb_t3 {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 30px;
+    COLOR: #000000;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+}
+
+/* Large italic maroon */
+.fancy_lgi {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 18px;
+    COLOR: maroon;
+    font-style: italic;
+    FONT-FAMILY: book antiqua, arial;
+}
+
+/* Main links */
+.nav_faq_blue
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: blue;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:none;
+}
+
+.nav_faq_blue:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: maroon;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:underline;
+}
+
+.nav_blue_sm
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: blue;
+    FONT-FAMILY: Tahoma;
+    text-decoration:underline;
+}
+.nav_blue_sm:hover
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: maroon;
+    FONT-FAMILY: Tahoma;
+    text-decoration:underline;
+}
+
+/* top menu selections*/
+.nav_faq_maroon
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14;
+    COLOR: maroon;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:underline;
+}
+
+.nav_faq_maroon:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: green;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:underline;
+}
+
+.nav_faq_maroon_sm
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: blue;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:none;
+}
+
+.nav_faq_maroon_sm:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: maroon;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:underline;
+}
+
+.nav_sub_cat
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: maroon;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:none;
+}
+
+/* main sub cat links */
+.nav_sub_cat:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: BLUE;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:underline;
+}
+
+/* Left Menu Links - gallery pages*/
+
+.left_menu_white {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.left_menu_white:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #FEEDAB;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: underline;
+}
+
+.left_menu_gold {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #FEEDAB;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.left_menu_gold:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: underline;
+}
+
+.main_menu {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+
+
+/* regular body text ---------------------  */
+.txt_label_bsm {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY:  Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* used on td */
+.txt_label_bold {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY:  Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* form fielld names - BOLD FONTS */
+.txt_label_bold2 {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.txt_label_medb {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.txt_label_lgb {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.nametext {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* maroon fonts italic */
+.titletextsm_i {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #800000;
+    font-style: italic;    
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.titletextmed_i {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: #800000;
+    font-style: italic;    
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.titletextlg_i {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #800000;
+    font-style: italic;    
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* maroon fonts */
+.titletextsm {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #800000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.titletextmed {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: #800000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.titletextlg {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #800000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* STD blk fonts */
+
+.text_xs {
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 9px;
+    COLOR: #000000;
+}
+
+.text_xsm {
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+}
+
+.txt_label {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.text_sm{
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+}
+
+.text_med {
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 13px;
+    COLOR: #000000;
+}
+
+.text_lg {
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 14px;
+    COLOR: #000000;
+}
+
+.blue_txt {
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 11px; COLOR: #0066ff; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+	TEXT-DECORATION: none
+}
+.blue_txt_sm {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; 
+	COLOR: BLUE; font-family: "Times New Roman", Times, serif; 
+	TEXT-DECORATION: none
+}
+.blue_txt_lg {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 18px; 
+	COLOR: BLUE; 
+	font-family: "Times New Roman", Times, serif; 
+	font-style: italic; 
+	TEXT-DECORATION: none
+}
+
+.chart_dark {
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    BACKGROUND-COLOR: #800000;
+}
+
+.err_class {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: red;
+    FONT-FAMILY: Tahoma;
+}
+
+.got_q_blue
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: blue;
+    font-style: italic;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:none;
+}
+
+.got_q_blue:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: maroon;
+    font-style: italic;
+    FONT-FAMILY: Book Antiqua, Tahoma, arial;
+    text-decoration:underline;
+}
+
+a
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma;
+    text-decoration:none;
+}
+
+a:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: blue;
+    FONT-FAMILY: Tahoma;
+    text-decoration: underline;
+}
+
+.nav
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma;
+    text-decoration:none;
+}
+.nav:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: blue;
+    FONT-FAMILY: Tahoma;
+    text-decoration:underline;
+}
+
+.title_bar_table
+{
+    BORDER-RIGHT: #C0C0C0 1px solid;
+    BORDER-TOP: #C0C0C0 1px solid;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 14px;
+    BORDER-LEFT: #C0C0C0 1px solid;
+    BORDER-BOTTOM: #C0C0C0 1px solid;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #FFFFFF;
+}
+
+.title_bar {
+    PADDING-LEFT: 10px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    WORD-SPACING: 0.1em;
+    COLOR: #FEEDAB;
+    FONT-FAMILY:  comic sans, comic sans ms, serif;
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #630000;
+    TEXT-DECORATION: none;
+	background-image:url(http://www.quagmirepuzzleboxes.com/sub_flow/images/DWoodt.jpg);
+}
+
+.top_nav
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: none;
+}
+.top_nav:hover
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: green;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.top_nav_main
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.top_nav_main:hover
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #D10317;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.top_nav_main2
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.top_nav_main2:hover
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #D10317;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.top_nav_black
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: none;
+}
+.top_nav_black:hover
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #D10317;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bot_nav
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #990000;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bot_nav:hover
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: green;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bot_nav2
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 9px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blue_link_nav
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #2D00D4;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: none;
+}
+.blue_link_nav:hover
+{
+	FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #4848F0;
+    FONT-FAMILY: Verdana;
+    font-weight: bold;
+    text-decoration: underline;
+}

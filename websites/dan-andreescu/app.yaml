@@ -1,0 +1,14 @@
+application: dan-andreescu
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /content
+  static_dir: content
+
+- url: /yui
+  static_dir: yui
+
+- url: /.*
+  script: index.py

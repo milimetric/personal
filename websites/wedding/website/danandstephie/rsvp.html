@@ -1,0 +1,76 @@
+{% extends 'indexContents.html' %}
+
+	{% block welcomeHeader %}
+		Hope you can make it!
+	{% endblock welcomeHeader %}
+
+	{% block welcomeContent %}
+	<form id="rsvpForm" action="/rsvp" method="POST">
+		<fieldset>
+			<legend>RSVP</legend>
+			<ul>
+				<li>
+					<label for="howMany">Number Attending</label>
+					<input type="number" name="howMany" id="howMany" value="1" max="5" min="1"/>
+				</li>
+				<li class="names">
+					<label for="name" id="nameLabel">Name</label>
+					<input type="text" name="name" id="name" required/>
+				</li>
+				<li>
+					<label for="yes">Accepts</label>
+					<input type="radio" name="coming" id="yes" value="true" required/>
+					<label for="no" class="smaller">Regrets :(</label>
+					<input type="radio" name="coming" id="no" value="false" required/>
+				</li>
+			</ul>
+			<div class="submit">
+				<input type="submit" value="Send" id="sendAddress" />
+			</div>
+		</fieldset>
+	</form>
+
+	{% include "info.html" %}
+	{% endblock welcomeContent %}
+
+	{% block detailContent %}
+	<div id="detailOne">
+		<img src="images/rsvp.jpg" alt="dan and stephie"/>
+	</div>
+	{% endblock detailContent %}
+
+	{% block javascript %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var updateNumberAttending = function(){
+				var many = $('#howMany').val();
+				if (many > 8) { return; }
+				$('#nameLabel').text((many > 1) ? 'Names' : 'Name');
+				var displayed = $('input[name=name]').length;
+				if (many > displayed) {
+					for (var i = 0; i < many - displayed; i++){
+						$('li.names').append($('<input type="text" name="name" class="guests" required/>'));
+					}
+				} else if (many < displayed) {
+					$('input.guests').each(function(guestIndex, guestInput){
+						if (guestIndex > many - 2) { $(guestInput).remove(); }
+					});
+				}
+			};
+
+			$('#howMany').keyup(updateNumberAttending);
+			$('#howMany').click(updateNumberAttending);
+			$('#howMany').change(updateNumberAttending);
+
+			$('#rsvpForm').submit(function(event){
+				event.preventDefault();
+				var f = $(this);
+				$.post(f.attr('action'), f.serialize(), function(){
+					$('input[type=submit]').hide();
+					$('#message').text($('#yes').is(':checked') ? 'See you soon!' : 'Sorry you can\'t make it.');
+					$('#info').show('slow');
+				});
+			});
+		});
+	</script>
+	{% endblock javascript %}

@@ -1,0 +1,98 @@
+/* reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+/* basic elements */
+body { color: #444; background: #edf6e3 url(images/700_28.jpg) top center repeat-y; font-size: 11px; line-height: 14px; font-family: Cochin, Georgia, "Helvetica Neue", "Bitstream Vera Serif", "Times New Roman", times, serif; text-align: left; margin: 0px; padding: 0px; }
+	
+a { font-weight: bold; text-decoration: none; color: #5f9f30; }
+
+/* major divs */
+#container { width: 700px; position: relative; margin: 0px auto 0px auto; padding: 0px 0px 0px 0px; }
+
+div.content { width: 480px; border: 1px solid #aaa; background: #fff url(images/leaf_09d.gif) bottom center no-repeat; margin: 0px 0px 16px 0px; padding: 10px 10px 20px 10px; }
+div.content:hover { background-image: url(images/leaf_09f.gif); }
+div.content h3 { background: #ddd url(images/stone_21.gif) bottom center repeat-x; margin: -10px -10px 4px -10px; padding: 4px 4px 4px 10px; }
+div.content h3.normal { margin: 10px; }
+div.content h3 a { color: #284C00; font-size: 11px; line-height: 16px; text-transform: uppercase; }
+
+div.recipeHolder { width: 304px; height: 200px; display: inline-block; margin: 20px 20px 60px 20px; }
+div.recipeBox { border: 1px solid #aaa; background: #fff url(images/leaf_09d.gif) bottom center no-repeat; width: 100%; height: 100%; }
+div.withImage div.recipeBox { background-size: 100%; background-position: center; }
+div.recipeBox:hover { background-image: url(images/leaf_09f.gif); }
+div.recipeBox p { padding: 14px; font-weight: normal; color: #444; }
+div.wide { width: 680px; }
+div.titleBox { width: 100%; border: 1px solid #AAA; text-transform: uppercase; line-height: 16px; background: #DDD url(images/stone_21.gif) bottom center repeat-x; }	
+div.titleBox > div { padding: 4px 4px 4px 4px; }
+
+/* minor divs */
+#pageHeader { width: 700px; background: url(images/blatt02aa.jpg) top center no-repeat; border-top: 0px; border-right: 1px solid #aaa; border-bottom: 1px solid #aaa; border-left: 1px solid #aaa; margin: 0px 0px 0px 0px; padding: 80px 0px 0px 0px; }
+	
+#pageHeader h1 { color: #fff; font-size: 24px; line-height: 24px; font-weight: bold; text-transform: uppercase; margin: -30px 0px 0px 10px; padding: 0px 0px 0px 0px; }
+	
+#pageHeader h2 { width: 680px; color: #fff; font-size: 11px; line-height: 16px; font-weight: normal; padding: 0px 0px 0px 3px; text-transform: uppercase; margin: 0px 0px 0px 10px; padding: 0px 0px 10px 4px; text-align: right; }
+		
+#quickSummary { width: 680px; background: #284C00 url(images/stone_24.gif) top center repeat-x; border: 1px solid #aaa; margin: 10px 0px 10px 0px; padding: 10px 10px 10px 10px; }
+
+#footer { width: 680px; border: 1px solid #aaa; background: #284C00 url(images/stone_19.gif) center center repeat-x; margin: 10px -10px 20px -10px; padding: 10px 10px 10px 10px; text-align: center; }
+	
+/* begin my own CSS */
+.left { text-align: left; display: inline-block; }
+.right { text-align: right; float: right; margin: 0; }
+
+#serves { border: 0; background-color: transparent; width: 40px;}
+#imagePreview { display: none; position: absolute; margin-left: -112px; border: 6px solid white; border-radius: 4px; width: 100px; height: 100px; }
+
+.editRecipe input[type=text], input[type=url], textarea { border: 1px solid #4f711f; }
+
+div.editRecipe ul.left { width: 666px; padding: 0 0 0 10px; }
+div.editRecipe ul.left label { color: #4f711f; font-size: 1.3em; display: block; margin: 0 0 8px 0; }
+div.editRecipe ul.left li { padding: 15px 0 10px 0; }
+div.editRecipe ul.left input#title { width: 600px; }
+div.editRecipe ul.left .addLink input { width: 60px; }
+div.editRecipe ul.left .addLink input[type=url] { width: 140px; }
+
+div.save { margin: 15px 0 0 15px; }
+div.save input[type=submit] { font-weight: bold; }
+
+div.recipeTitle { display: inline-block; text-align: left; width: 79%; }
+h3.recipeListTitle span.serves { color: #676767; }
+div.recipeActions { text-align: right; display: block; }
+span.serves { color: #676767; }
+
+.detailIngredients, #detailSteps { display: inline-block; vertical-align: top; margin: 10px 20px 20px 10px; }
+#detailSteps { line-height: 18px; }
+.detailIngredients li { display: table-row; }
+.detailIngredients li span { display: table-cell; padding: 2px 3px 2px 3px; }
+.detailIngredients li span.sectionHeading { font-weight: bold; padding: 8px 0 4px 0; font-size: 110%; }
+.detailIngredients li span.amount { font-weight: bold; text-align: right; }
+.detailIngredients li span.amountType { font-style: italic; }
+
+div.instanceList p { padding: 4px; margin: 0 0 10px 0; }
+div.editField label { display: block; }
+div.editField { margin: 0 0 14px 10px; }
+div.indent { margin-left: 10px; }
+div.spaceOutAfter { margin-bottom: 30px; }
+
+li.serves input[type=number] { width: 36px; margin: 0 6px 0 6px; }

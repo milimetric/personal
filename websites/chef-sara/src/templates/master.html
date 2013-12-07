@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html> 
+	<head>
+		<!-- to correct the unsightly Flash of Unstyled Content. http://www.bluerobot.com/web/css/fouc.asp -->
+		<script type="text/javascript"></script>
+
+		<link title="Pepper Grinder" rel="alternate stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/pepper-grinder/jquery-ui.css" ></link>
+		<link title="South Street" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/south-street/jquery-ui.css" ></link>
+		<link title="Le Frog" rel="alternate stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/le-frog/jquery-ui.css" ></link>
+		<link title="Humanity" rel="alternate stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/humanity/jquery-ui.css" ></link>
+
+		<link rel="stylesheet" href="/css/recipe.css" ></link>
+		<title><%block name="title">Chef Sara</%block></title>
+	</head>
+	<body>
+		<div id="container">
+			<div id="intro">
+				<div id="pageHeader">
+					<a href="/">
+						<h1><span>Chef Sara's Kitchen</span></h1>
+					</a>
+					<h2><span>${nickname} <a href="${logoutUrl}">Logout</a></span></h2>
+				</div>
+
+				<div id="quickSummary">
+					<div class="left">
+						<a href="/recipe/new" class="button" accesskey="n">New Recipe!</a>
+					</div>
+					<div class="right">
+						<img id="imagePreview" alt="preview image of the recipe currently focused on in the search"/>
+						<input type="search" id="search" name="query" placeholder="find recipes" accesskey="s" />
+					</div>
+				</div>
+			</div>
+
+			<div id="supportingText">
+				<div id="mainContent">
+					<%block name="mainContent">
+					</%block>
+				</div>
+				<div id="secondaryContent">
+					<%block name="secondaryContent">
+					</%block>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.1.0.js"></script>
+	<script src="/js/recipe.js"></script>
+	<%block name="javascript"/>
+</html>

@@ -1,0 +1,27 @@
+% for r in recipes:
+<% mostRecentPicture = r.mostRecentPicture() %>
+<% detailsLink = '/recipe/details/' + str(r.key().id()) %>
+
+
+<div class="recipeHolder${' withImage' if mostRecentPicture else ''}">
+	<a href="${detailsLink}">
+	% if mostRecentPicture:
+		<div class="recipeBox" style="background-image: url(/stored-images/instance/${str(mostRecentPicture)})"></div>
+	% else:
+		<div class="recipeBox">
+			<p>${r.steps[:400]}...</p>
+		</div>
+	% endif
+	</a>
+	<div class="titleBox">
+		<div>
+			<a href="${detailsLink}">${r.title}</a>
+			<span class="serves">(${r.servesMin}-${r.servesMax})</span>
+			<hr/>
+			<div class="recipeActions">
+				<a href="/recipe/cook/${r.key().id()}">(cook it)</a>
+			</div>
+		</div>
+	</div>
+</div>
+% endfor

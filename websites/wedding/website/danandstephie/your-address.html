@@ -1,0 +1,67 @@
+{% extends 'indexContents.html' %}
+
+	{% block welcomeHeader %}
+		Save the date: September 17th, 2011
+	{% endblock welcomeHeader %}
+
+	{% block welcomeContent %}
+	<form id="sendAddressForm" action="/your-address" method="POST">
+		<fieldset>
+			<legend>Your Address</legend>
+			<ul>
+				<li>
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" required/>
+				</li>
+				<li>
+					<label for="street">Street</label>
+					<input type="text" name="street" id="street" required/>
+				</li>
+				<li>
+					<label for="city">City, State, Zip</label>
+					<input type="text" name="cityStateZip" id="cityStateZip" required/>
+				</li>
+				<li>
+					<input type="submit" value="Send" id="sendAddress" />
+				</li>
+			</ul>
+		</fieldset>
+	</form>
+	<div id="googleCalendar">
+		<a class="external" href="http://www.google.com/calendar/event?action=TEMPLATE&text=Dan%20and%20Stephanie's%20Wedding&dates=20110917/20110918&details=&location=Philadelphia%2C%20PA&trp=false&sprop=http%3A%2F%2Fdanandstephie.com&sprop=name:Dan%20and%20Stephie" target="_blank">Add to Google Calendar</a>
+	</div>
+
+	{% include "info.html" %}
+	{% endblock welcomeContent %}
+
+	{% block javascript %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#sendAddressForm').submit(function(event){
+				event.preventDefault();
+				var f = $(this);
+				$.post(f.attr('action'), f.serialize(), function(){
+					$('input[type=submit],label').hide();
+					$('input[type=text]')
+						.attr('readonly', true)
+						.css('border', 'none')
+						.css('background', 'transparent')
+						.css('font', '11px georgia')
+						.css('color', '#555753')
+						.css('margin', '0')
+						.css('padding', '0')
+						.parent('li').css('line-height', '11px')
+						.parent('ul').css('margin-bottom', '16px');
+					$('#message').text('Thank you :)');
+					$('#info').show('slow');
+				});
+			});
+		});
+	</script>
+	{% endblock javascript %}
+
+	{% block detailContent %}
+	{% endblock detailContent %}
+
+	{% block links %}
+	{% endblock links %}

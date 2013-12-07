@@ -1,0 +1,229 @@
+<mockup version="1.0" skin="sketch" measuredW="1248" measuredH="728" mockupW="1214" mockupH="728">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="34" y="100" w="70" h="25" measuredW="70" measuredH="25" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Chef%20Sara</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="398" y="98" w="-1" h="-1" measuredW="128" measuredH="28" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20New%20Recipe</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="34" y="0" w="856" h="79" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Main%20Image</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="34" y="140" w="856" h="583" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="176" y="155" w="261" h="-1" measuredW="79" measuredH="29" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::VRule" x="155" y="155" w="-1" h="558" measuredW="5" measuredH="100" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="60" y="156" w="-1" h="-1" measuredW="80" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Recipe%20Title</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="92" y="199" w="-1" h="-1" measuredW="48" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Serves</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::VRule" x="459" y="151" w="-1" h="562" measuredW="5" measuredH="100" zOrder="8" locked="false" isInGroup="-1"/>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="874" y="140" w="-1" h="588" measuredW="16" measuredH="100" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::TextArea" x="176" y="240" w="261" h="156" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1qt.%20milk%0A1%20quart%20milk%0A1%201/2%20quarts%20milk%0A1.5%20quart%20milk</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Label" x="64" y="241" w="-1" h="-1" measuredW="76" measuredH="25" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Ingredients</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::TextArea" x="176" y="411" w="261" h="156" measuredW="200" measuredH="140" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1.%20free%20form%0A2.%20still%20free%20form</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Label" x="99" y="407" w="-1" h="-1" measuredW="41" measuredH="25" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Steps</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::HSlider" x="176" y="205" w="261" h="-1" measuredW="33" measuredH="11" zOrder="14" locked="false" isInGroup="-1"/>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::Label" x="106" y="583" w="-1" h="-1" measuredW="35" measuredH="25" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Links</text>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::TextInput" x="176" y="581" w="80" h="-1" measuredW="43" measuredH="29" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>name</text>
+      </controlProperties>
+    </control>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::TextInput" x="271" y="581" w="111" h="-1" measuredW="34" measuredH="29" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>link</text>
+      </controlProperties>
+    </control>
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::Button" x="397" y="582" w="40" h="28" measuredW="47" measuredH="28" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>add</text>
+      </controlProperties>
+    </control>
+    <control controlID="66" controlTypeID="com.balsamiq.mockups::Link" x="176" y="615" w="-1" h="-1" measuredW="28" measuredH="25" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>mom</text>
+      </controlProperties>
+    </control>
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::Link" x="176" y="642" w="-1" h="-1" measuredW="58" measuredH="25" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>food.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::Button" x="679" y="155" w="180" h="28" measuredW="90" measuredH="28" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::Button" x="479" y="198" w="185" h="28" measuredW="90" measuredH="28" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::Button" x="679" y="198" w="180" h="28" measuredW="90" measuredH="28" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::Button" x="479" y="240" w="185" h="28" measuredW="90" measuredH="28" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::Button" x="679" y="240" w="180" h="28" measuredW="90" measuredH="28" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::Button" x="479" y="283" w="185" h="28" measuredW="90" measuredH="28" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::Button" x="679" y="283" w="180" h="28" measuredW="90" measuredH="28" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="75" controlTypeID="com.balsamiq.mockups::Button" x="479" y="326" w="185" h="28" measuredW="90" measuredH="28" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::Button" x="679" y="326" w="180" h="28" measuredW="90" measuredH="28" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Button" x="479" y="368" w="185" h="28" measuredW="90" measuredH="28" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::Button" x="679" y="368" w="180" h="28" measuredW="90" measuredH="28" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Button" x="479" y="411" w="185" h="28" measuredW="90" measuredH="28" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Button" x="679" y="411" w="180" h="28" measuredW="90" measuredH="28" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::Button" x="479" y="454" w="185" h="28" measuredW="90" measuredH="28" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::Button" x="679" y="454" w="180" h="28" measuredW="90" measuredH="28" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::Button" x="479" y="496" w="185" h="28" measuredW="90" measuredH="28" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::Button" x="679" y="496" w="180" h="28" measuredW="90" measuredH="28" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::Button" x="479" y="539" w="185" h="28" measuredW="90" measuredH="28" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::Button" x="679" y="539" w="180" h="28" measuredW="90" measuredH="28" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::Button" x="479" y="582" w="185" h="28" measuredW="90" measuredH="28" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="88" controlTypeID="com.balsamiq.mockups::Button" x="679" y="582" w="180" h="28" measuredW="90" measuredH="28" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::Button" x="479" y="624" w="185" h="28" measuredW="90" measuredH="28" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::Button" x="679" y="624" w="180" h="28" measuredW="90" measuredH="28" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vegetarian</text>
+      </controlProperties>
+    </control>
+    <control controlID="91" controlTypeID="com.balsamiq.mockups::TextInput" x="479" y="154" w="109" h="-1" measuredW="47" measuredH="29" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28new%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="92" controlTypeID="com.balsamiq.mockups::Button" x="597" y="155" w="67" h="28" measuredW="47" measuredH="28" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>add</text>
+      </controlProperties>
+    </control>
+    <control controlID="93" controlTypeID="com.balsamiq.mockups::Button" x="176" y="685" w="-1" h="-1" measuredW="54" measuredH="28" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Save</text>
+      </controlProperties>
+    </control>
+    <control controlID="94" controlTypeID="com.balsamiq.mockups::SearchBox" x="686" y="99" w="204" h="-1" measuredW="100" measuredH="25" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>find%20recipes</text>
+      </controlProperties>
+    </control>
+    <control controlID="95" controlTypeID="com.balsamiq.mockups::StickyNote" x="984" y="104" w="264" h="179" measuredW="109" measuredH="123" zOrder="48" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Todo%0A%20%0ATags%0ALinks</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

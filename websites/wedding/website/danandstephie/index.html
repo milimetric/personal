@@ -1,0 +1,37 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta name="robots" content="all">
+		<title>Dan and Stephanie</title>
+		<!-- thanks for the style to CSS Zen Garden, Dave Shea, and BoŽr Attila, style #83 -->
+		<style type="text/css" title="currentStyle" media="screen">
+			@import "css/083.css";
+			@import "css/le-frog/jquery-ui-1.8.11.custom.css";
+		</style>
+	</head>
+
+	<body>
+		<audio src="/audio/song.mp3" id="ourSongs" controls style="display: none; width: 150px; float: right;" preload="none"></audio>
+		<div id="hijax">
+			{% include "indexContents.html" %}
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				if (navigator && (
+						navigator.userAgent.toLowerCase().indexOf('chrome') > -1
+						)
+					)
+				{
+					$('#ourSongs').show();
+				}
+
+				$('a:not(.external)').live('click', function (event){
+					event.preventDefault();
+					$.get($(this).attr('href'), function(data){
+						$('#hijax').html(data);
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

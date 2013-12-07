@@ -1,0 +1,56 @@
+<%inherit file='master.html'/>
+
+<%block name="mainContent">
+	<form action="/recipe/save" method="POST">
+		<% ingredientText = '' %>
+		% if recipe.is_saved():
+			<% ingredientText = '\n'.join([(
+					i.ingredient if i.isSectionHeading() else i.amount + ' ' + i.amountType + ' ' + i.ingredient
+				) for i in sorted(recipe.ingredients, key = lambda r: r.order)])
+			%>
+			<input type="hidden" name="id" value="${recipe.key().id()}"/>
+		% else:
+			<input type="hidden" name="id" />
+		% endif
+		<div class="editRecipe content wide">
+			<h3>${recipe.title if recipe.is_saved() else 'Let us define some yummy food'}</h3>
+			<ul class="left">
+				<li>
+					<label for="title">Recipe Title</label>
+					<input name="title" type="text" id="title" placeholder="recipe title" autofocus value="${recipe.title or ''}" required/>
+				</li>
+				<li class="serves">
+					<label for="serves">Serves</label>
+					<input name="servesMin" type="number" value="${recipe.servesMin or 4}" min="1" max="19" />
+					to
+					<input name="servesMax" type="number" value="${recipe.servesMax or 6}" min="2" max="20" />
+				</li>
+				<li>
+					<label for="ingredients">Ingredients</label>
+					<textarea name="ingredients" id="ingredients" rows="16" cols="72" placeholder="one ingredient per line, use [section] to make section headers" required>${ingredientText}</textarea>
+				</li>
+				<li>
+					<label for="steps">Steps</label>
+					<textarea name="steps" id="steps" rows="16" cols="72" placeholder="steps" required />${recipe.steps or ''}</textarea>
+				</li>
+				<li>
+					<label>Links</label>
+					<div class="addLink">
+						<input type="url" id="newLinkUrl" placeholder="link"/>
+						<input type="button" id="newLink" class="button" value="add" />
+						<ul id="addedLinks">
+						% if recipe.is_saved() and recipe.references.count() > 0:
+							% for t in recipe.references:
+							<li><input type="hidden" value="${t.link}" name="links"/><a href="#" class="remove" title="remove">[x]</a> ${t.link}</li>
+							% endfor
+						% endif
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="save">
+			<input type="submit" class="button" value="Save this whole Thing" />
+		</div>
+	</form>
+</%block>

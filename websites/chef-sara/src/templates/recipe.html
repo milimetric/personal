@@ -1,0 +1,48 @@
+<h3 class="recipeListTitle">
+	<span>${recipe.title}</span>
+	<span class="serves">(serves ${recipe.servesMin}-${recipe.servesMax})</span>
+</h3>
+<div class="recipeActions">
+	% if recipe.chef == user:
+	<a href="/recipe/edit/${recipe.key().id()}">(edit)</a>
+	% endif
+	<a href="/recipe/cook/${recipe.key().id()}">(cook)</a>
+</div>
+<ol class="detailIngredients">
+	% for i in sorted(recipe.ingredients, key = lambda r: r.order):
+	<li>
+		<!-- <span>${i.order}</span> -->
+	% if i.isSectionHeading():
+		<span class="amount"></span>
+		<span class="amountType"></span>
+		<span class="sectionHeading">${i.ingredient.replace('[','').replace(']','')}</span>
+	% else:
+		<span class="amount">${i.amount}</span>
+		<span class="amountType">${i.amountType}</span>
+		<span>${i.ingredient}</span>
+	% endif
+	</li>
+% endfor
+</ol>
+<p id="detailSteps">
+	${recipe.steps}
+</p>
+
+% if recipe.references.count() > 0:
+<h4>Links</h4>
+<ul>
+	% for t in recipe.references:
+	<li><a href="${t.link}">${t.name}</a></li>
+	% endfor
+</ul>
+% endif
+
+% if recipe.tags.count() > 0:
+<br/>
+<h4>Tags</h4>
+<ul>
+	% for t in recipe.tags:
+	<li>${t.tag.name}</li>
+	% endfor
+</ul>
+% endif

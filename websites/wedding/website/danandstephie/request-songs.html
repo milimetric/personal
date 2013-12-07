@@ -1,0 +1,86 @@
+{% extends 'indexContents.html' %}
+
+	{% block welcomeHeader %}
+		Any songs you want us to play?
+	{% endblock welcomeHeader %}
+
+	{% block welcomeContent %}
+	<form id="requestSongForm" action="/request-songs" method="POST">
+		<fieldset>
+			<legend>Songs you want to hear</legend>
+			<dl>
+				<dt>
+					<label for="requester">Your Name</label>
+				</dt>
+				<dd>
+					<input type="text" name="requester" id="requester"/>
+				</dd>
+
+				<dt>
+					<label for="song" id="songLabel">Songs (link or name)</label>
+				</dt>
+				<dd id="songs">
+					<input type="text" name="song" id="song" required/>
+				</dd>
+			</dl>
+		</fieldset>
+		<div>
+			<input type="submit" value="Send" id="sendAddress" />
+		</div>
+	</form>
+
+	{% include "info.html" %}
+	{% endblock welcomeContent %}
+
+	{% block detailContent %}
+	{% include "requested-songs.html" %}
+	{% endblock detailContent %}
+
+	{% block javascript %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var theFirstSong = $('#song');
+			var allTheSongs = 'input[name=song]';
+			var id = 0;
+			var newSong = function() {
+				return $('<input type="text" name="song" />').attr('id', 'song' + (id++));
+			}
+			$(allTheSongs, $('#requestSongForm')[0]).live('keyup', function(){
+				var theSongs = $(allTheSongs);
+				var theLastSong = $(theSongs[theSongs.length - 1]);
+				var isFirst = $(this).attr('id') == theFirstSong.attr('id');
+				var isLast = $(this).attr('id') == theLastSong.attr('id');
+				if ($(this).val() == '' && !isLast && !isFirst){
+					$(this).remove();
+					theLastSong.focus();
+				} else if ($(this).val() == '' && !isFirst && theFirstSong.val() == ''){
+					$(this).remove();
+					theFirstSong.focus();
+				} else if (theLastSong.val() != ''){
+					theLastSong.after(newSong());
+				}
+			});
+			$('form.voteUp', $('#detail')[0]).live('submit', function(event){
+				event.preventDefault();
+				var f = $(this);
+				var spinner = f.siblings('img.spinner');
+				spinner.show();
+				var hideSpinner = function(){ spinner.hide(); }
+				$.post(f.attr('action'), f.serialize(), function(data){
+					f.siblings('span').text(data);
+				}).then(hideSpinner, hideSpinner);
+			});
+			$('#requestSongForm').submit(function(event){
+				event.preventDefault();
+				var f = $(this);
+				$.post(f.attr('action'), f.serialize(), function(data){
+					$('#song').val('');
+					$(allTheSongs + ':not(#song)').remove();
+					$('#songRequests').replaceWith(data);
+					$('#message').text('Thanks, added it below.  You can request more or vote below.');
+					$('#info').show('slow');
+				});
+			});
+		});
+	</script>
+	{% endblock javascript %}

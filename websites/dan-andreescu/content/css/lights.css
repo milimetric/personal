@@ -1,0 +1,30 @@
+div.light{
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+	border: solid 1px #000000;
+
+	float: left;
+}
+
+div.lightON{
+	background-color: #ffff00;
+}
+
+div#lights {
+	width: 130px;
+	height: 130px;
+}
+
+table {
+	border: solid 2px black;
+	margin: 14px;
+}
+table td {
+	border: solid 1px black;
+	padding: 2px;
+}
+table tr.header {
+	background-color: #232323;
+	color: #ffffff;
+}

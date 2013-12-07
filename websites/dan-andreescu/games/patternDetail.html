@@ -1,0 +1,58 @@
+<h4>Facts</h4>
+<table>
+	<tr class="header">
+		<td>Name
+		</td>
+	</tr>
+	{% for fact in facts %}
+	<tr>
+		<td>{{fact.name}}
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+<div id="fact" class="addFact saveParent">
+	<input type="hidden" class="addFactField" value="{{pattern.key}}" name="ParentKey"/>
+	<label>Fact: <input type="text" name="Name" class="addFactField"/></label>
+	<input type="button" name="AddFact" value="Add Fact"/>
+</div>
+<hr/>
+
+<h4>Occurrences</h4>
+<table>
+	<tr class="header">
+		<td>Fact Name
+		</td>
+		<td>Fact Quantity
+		</td>
+		<td>Time of Day
+		</td>
+		<td>Date
+		</td>
+	</tr>
+	{% for occurrence in occurrences %}
+	<tr>
+		<td>{{occurrence.observableFact.name}}
+		</td>
+		<td>{{occurrence.observableFactQuantity}}
+		</td>
+		<td>{{occurrence.timeOfDay}}
+		</td>
+		<td>{{occurrence.date}}
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+<div id="occurrence" class="addOccurrence saveParent">
+	<input type="hidden" class="addOccurrenceField" value="{{pattern.key}}" name="ParentKey"/>
+	<label>Fact:
+		<select name="Fact" class="addOccurrenceField">
+		{% for fact in facts %}
+			<option value="{{fact.key}}">{{fact.name}}</option>
+		{% endfor %}
+		</select>
+	</label>
+	<label>Quantity: <input type="text" name="Quantity" class="addOccurrenceField" /></label>
+	<label>Time of Day: <input type="text" name="TimeOfDay" class="addOccurrenceField" /></label>
+	<input type="button" name="AddOccurrence" value="Add Occurrence"/>
+</div>

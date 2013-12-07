@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Plan Your Raised Garden Bed</title>
+
+		<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="http://jcscript.com/data/js/jCanvaScript.1.5.14.js"></script>
+		<script>
+			function draw(width, length, widthwise, lengthwise, widthspacing, lengthspacing, color) {
+				var pixelsPerTenthInch = 0.5;
+				var bedX = 50;
+				var bedY = 40;
+				var diameter = lengthspacing / 20;
+
+				jc.clear();
+				jc.start('gardenBed');
+				jc.text((width / 10) + ' inches wide', 0, 0, '#ffffff').id('widthText').font('12px Arial');
+				jc.text((length / 10) + ' inches long', length * pixelsPerTenthInch / 2 + 15, 25, '#ffffff').font('12px Arial');
+				jc.rect(bedX, bedY, length * pixelsPerTenthInch, width * pixelsPerTenthInch, '#ffffff');
+
+				var x = lengthspacing * pixelsPerTenthInch / 2.0;
+				var y = widthspacing * pixelsPerTenthInch / 2.0;
+				// draw plants
+				for (var i = 0; i < widthwise; i++) {
+					x = lengthspacing * pixelsPerTenthInch / 2;
+					for (var j = 0; j < lengthwise; j++) {
+						jc.circle(bedX + x, bedY + y, diameter, true).color(color);
+						x += lengthspacing * pixelsPerTenthInch;
+					}
+					y += widthspacing * pixelsPerTenthInch;
+				}
+
+				jc('#widthText').rotate(270).translateTo(25, width * pixelsPerTenthInch / 2 + 15);
+				jc.start('gardenBed');
+			}
+
+			var color = '#8c1b1b';
+			var plants = new Object();
+			plants['red siberian tomato'] = { color: '#8c1b1b', seedSpacing: 60, rowSpacing: 420, spacingAfterThinning: 360 };
+			plants['roma tomato'] = { color: '#af3412', seedSpacing: 40, rowSpacing: 420, spacingAfterThinning: 360 };
+			plants['orange sun sweet pepper'] = { color: '#ffa928', seedSpacing: 20, rowSpacing: 270, spacingAfterThinning: 210 };
+			plants['squash gold rush hybrid'] = { color: '#f2a532', seedSpacing: 30, rowSpacing: 420, spacingAfterThinning: 420 };
+			plants['mammoth red rock cabbage'] = { color: '#bf639f', seedSpacing: 40, rowSpacing: 300, spacingAfterThinning: 210 };
+			plants['parsnip'] = { color: '#d9a86c', seedSpacing: 10, rowSpacing: 150, spacingAfterThinning: 45 };
+			plants['garden beans'] = { color: '#95be82', seedSpacing: 25, rowSpacing: 360, spacingAfterThinning: 50 };
+			plants['louisiana long green eggplant'] = { color: '#b9d99a', seedSpacing: 5, rowSpacing: 360, spacingAfterThinning: 210 };
+			plants['chamomile'] = { color: '#bfa004', seedSpacing: 5, rowSpacing: 300, spacingAfterThinning: 90 };
+
+			$(document).ready(function(){
+				for (key in plants) {
+					$('#name').append($('<option></option>').text(key).val(key));
+				}
+
+				$('#name').change(handleChange);
+				$('#draw').click(redraw);
+				$('input[type=number]').change(redraw);
+
+				$('#draw').trigger('click');
+			});
+
+			function handleChange(){
+				if ($('#name').val() in plants) {
+					var prefill = plants[$(this).val()];
+
+					$('#seedSpacing').val(prefill.seedSpacing);
+					$('#rowSpacing').val(prefill.rowSpacing);
+					$('#spacingAfterThinning').val(prefill.spacingAfterThinning);
+					color = prefill.color;
+
+					redraw();
+				}
+			}
+
+			function redraw(){
+				var seedSpacing = parseInt($('#seedSpacing').val());
+				var rowSpacing = parseInt($('#rowSpacing').val());
+				var spacingAfterThinning = parseInt($('#spacingAfterThinning').val());
+				var widthwise = parseInt($('#widthwise').val());
+				var lengthwise = parseInt($('#lengthwise').val());
+				var width = rowSpacing * widthwise;
+				var length = spacingAfterThinning * lengthwise;
+				draw(width, length, widthwise, lengthwise, rowSpacing, spacingAfterThinning, color);
+			}
+		</script>
+		<style>
+			body { background-color: #111; font-family: sans-serif; font-size: 14px; color: #CCC; }
+			a:active, a:visited, a:link { color: #CCC; }
+			a:hover { text-decoration:none; }
+
+			.canvasHolder { border: solid 15px #222; } 
+			.description { background-color: #222; padding: 15px; margin-bottom:1px; }
+
+			strong { color: #FFF; }
+
+			div.description label { display: block; }
+			div.description label span { display: inline-block; width: 200px; text-align: right; margin: 0 14px 0 0; }
+			div.description label input[type=number] { width: 50px; }
+			div.description label input[type=text] { width: 300px; }
+		</style>
+	</head>
+		
+	<body>
+		<div class="description">
+			<label>
+				<span>Plant Name</span>
+				<select id="name"></select>
+			</label>
+			<label>
+				<span>Seed Spacing</span>
+				<input type="number" id="seedSpacing" value="20"/>
+				1/10 "
+			</label>
+			<label>
+				<span>Row Spacing</span>
+				<input type="number" id="rowSpacing" value="240"/>
+				1/10 "
+			</label>
+			<label>
+				<span>Spacing After Thinning</span>
+				<input type="number" id="spacingAfterThinning" value="240"/>
+				1/10 "
+			</label>
+			<label>
+				<span>How Many Plants Width-wise</span>
+				<input type="number" id="widthwise" value="2"/>
+			</label>
+			<label>
+				<span>How Many Plants Length-wise</span>
+				<input type="number" id="lengthwise" value="3"/>
+			</label>
+			<hr/>
+			<label>
+				<span></span>
+				<input type="button" id="draw" value="Draw Bed"/>
+			</label>
+		</div>
+		<div class="canvasHolder">
+			<canvas id="gardenBed" width="1200" height="600"></canvas>
+		</div>
+	</body>
+</html>

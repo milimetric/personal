@@ -1,0 +1,18 @@
+<div id="songRequests">
+	<h3 id="voteTitle">Vote</h3>
+	<ul>
+	{% for song in songs %}
+		<li>
+			<form class="voteUp" action="/actions/vote-up" method="POST" title="vote up">
+				<input type="hidden" value="{{ song.key.id }}" name="songId"/>
+				<input type="submit" class="voteUp" title="vote up" value=""/>
+			</form>
+			<a class="external" href="{{ song.link|escape }}" target="_blank">{{ song.title|escape }}</a>
+			<span>
+				({{ song.votes.count }})
+			</span>
+			<img alt="voting" title="voting" src="/css/spinner.gif" class="spinner"/>
+		</li>
+	{% endfor %}
+	</ul>
+</div>

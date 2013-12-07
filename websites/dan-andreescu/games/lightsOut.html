@@ -1,0 +1,46 @@
+{% extends "../index.html" %}
+{% block title %}{{ block.super }} | Lights Out{% endblock title %}
+{% block game %}
+<h4>Lights Out</h4>
+<div id="puzzlesContainer">
+	{% include "puzzles.html" %}
+</div>
+<input type="button" id="restart" value="Restart Puzzle"/>
+<br />
+<br />
+
+<div id="lights">
+	<div id="c11" class="light"></div>
+	<div id="c12" class="light"></div>
+	<div id="c13" class="light"></div>
+	<div id="c14" class="light"></div>
+	<div id="c15" class="light"></div>
+	<div id="c21" class="light"></div>
+	<div id="c22" class="light"></div>
+	<div id="c23" class="light"></div>
+	<div id="c24" class="light"></div>
+	<div id="c25" class="light"></div>
+	<div id="c31" class="light"></div>
+	<div id="c32" class="light"></div>
+	<div id="c33" class="light"></div>
+	<div id="c34" class="light"></div>
+	<div id="c35" class="light"></div>
+	<div id="c41" class="light"></div>
+	<div id="c42" class="light"></div>
+	<div id="c43" class="light"></div>
+	<div id="c44" class="light"></div>
+	<div id="c45" class="light"></div>
+	<div id="c51" class="light"></div>
+	<div id="c52" class="light"></div>
+	<div id="c53" class="light"></div>
+	<div id="c54" class="light"></div>
+	<div id="c55" class="light"></div>
+</div>
+<input id="puzzleName" type="text"/>
+<input id="save" name="save" type="button" value="Save As Puzzle"/>
+{% endblock game %}
+
+{% block js %}
+{{ block.super }}
+<script src="../content/js/lightsOut.js" type="text/javascript"></script>
+{% endblock js %}

@@ -1,0 +1,6 @@
+<select id="puzzles">
+	<option value="-1">*** Select A Puzzle ***</option>
+	{% for puzzle in puzzles %}
+	<option value="{{puzzle.lightsOn}}">{{puzzle.name}}</option>
+	{% endfor %}
+</select>

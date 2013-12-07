@@ -1,0 +1,5 @@
+<ul>
+	{% for pattern in patterns %}
+	<li><a href="javascript:getPattern('{{pattern.key}}');">{{pattern.name}}</a></li>
+	{% endfor %}
+</ul>
